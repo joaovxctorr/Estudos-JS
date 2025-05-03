@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <script>
+        const nome = prompt("Qual o seu nome?");
+        document.body.innerHTML = `<h1>Olá ${nome}, tudo bem?</h1>`;
+        document.body.innerHTML += `<h2>O seu nome tem ${nome.length} letras</h2>`;
+        document.body.innerHTML += `<h2>Seu nome em maiúsculas é ${nome.toUpperCase()} e em minusculas é ${nome.toLowerCase()}</h2>`;
+        document.body.innerHTML += `<h2>Seu nome começa com a letra ${nome[0]}</h2>`;
+        document.body.innerHTML += `<h2>Seu nome termina com a letra ${nome[nome.length - 1]}</h2>`;
+        document.body.innerHTML += `<h2>O indice da primeira letra A no seu nome: ${nome.indexOf('a')}</h2>`;
+        document.body.innerHTML += `<h2>O indice da ultima letra A no seu nome: ${nome.lastIndexOf('a')}</h2>`;
+        document.body.innerHTML += `<h2>As 3 primeiras letras do seu nome: ${nome.slice(0, 3)}</h2>`;
+        document.body.innerHTML += `<h2>As 3 ultimas letras do seu nome: ${nome.slice(-3)}</h2>`;
+    </script>
+</body>
+</html>
