@@ -53,3 +53,23 @@ function criarPessoa (nome, idade) {
 
 const pessoa1 = criarPessoa("João", 25);
 pessoa1.dizerOla(); // Olá, meu nome é João e tenho 25 anos.
+
+//Factory Function
+// A factory function is a function that returns an object
+function criarCarro(marca, modelo, ano, ano, peso, cor) {
+    return {
+        marca: marca,
+        modelo: modelo,
+        ano: ano,
+        peso: peso,
+        cor: cor,
+        ligar: function() {
+            console.log(`O carro ${this.marca} ${this.modelo} está ligado.`);
+        },
+        desligar: function() {
+            console.log(`O carro ${this.marca} ${this.modelo} está desligado.`);
+        }
+    };
+}
+
+const carro1 = criarCarro("Fusca", "Volkswagen", 1970, 800, "azul");
