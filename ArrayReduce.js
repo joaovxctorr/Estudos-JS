@@ -28,3 +28,17 @@ function getMax(accumulator, element) {
 function getMin(accumulator, element) {
     return Math.min(accumulator, element);
 }
+
+// Example 3
+let numeros = [5, 10, 15, 20, 25];
+
+let total2 = numeros.reduce((acumulador, numero, indice, original) => {
+    console.log(`Acumulador: ${acumulador} - total ate o momento`);
+    console.log(`Número: ${numero} - valor atual`);
+    console.log(`Índice: ${indice} - posição atual`);
+    console.log(`Original: ${original} - array original\n`);
+    console.log("========================================");
+    return acumulador += numero;
+    }) 
+
+console.log("Total: " + total2); 

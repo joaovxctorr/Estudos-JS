@@ -1,3 +1,6 @@
+// -5  -4  -3  -2  -1  0 
+//  0   1   2   3   4  5 
+
 const fruits = [
     {name: 'apple', color: 'red', calories: 95},
     {name: 'banana', color: 'yellow', calories: 105},
@@ -14,11 +17,17 @@ fruits.pop() // pop remove o último item de um array
 
 fruits.shift() // shift remove o primeiro item de um array
 
+fruits.push() // push adiciona um item ao final de um array
+
 fruits.unshift() // unshift adiciona um item ao início de um array
 
 fruits.concat() // concat combina dois arrays
 
 fruits.slice() // slice retorna uma parte de um array
+
+fruits.split(",") // split divide uma string em um array
+
+fruits.join("+") // join combina um array em uma string
 
 fruits.splice() // splice remove ou substitui itens de um array
 

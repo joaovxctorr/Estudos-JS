@@ -15,21 +15,29 @@ let lista = ["Joao", "Maria", "Jose"];
 
 lista.map((nome, index) => {
     console.log(`Nome: ${nome}, Posição: ${index}`);
-    console.log("========================================");
     }); 
+
+console.log("========================================");
 
 
 // Exemplo 3
-let numeros = [5, 10, 15, 20, 25];
+const pessoas = [
+    { nome: 'João', idade: 25 },
+    { nome: 'Maria', idade: 17 },
+    { nome: 'José', idade: 30 },
+    { nome: 'Ana', idade: 22 }
+];
 
-let total = numeros.reduce((acumulador, numero, indice, original) => {
-    console.log(`Acumulador: ${acumulador} - total ate o momento`);
-    console.log(`Número: ${numero} - valor atual`);
-    console.log(`Índice: ${indice} - posição atual`);
-    console.log(`Original: ${original} - array original\n`);
-    console.log("========================================");
-    return acumulador += numero;
-    }) 
+const nomes = pessoas.map(pessoa => pessoa.nome);
+console.log("Nomes: " + nomes); // ['João', 'Maria', 'José', 'Ana']
 
-console.log("Total: " + total); 
+const idades = pessoas.map(pessoa => pessoa.idade);
+console.log("Idades: " + idades); // [25, 17, 30, 22]
+
+const comIds = pessoas.map(function(obj, indice) {
+    const newObj = { ...obj }; // cria uma cópia do objeto original
+    newObj.id = indice + 1; // adiciona a propriedade id
+    return newObj; 
+});
+console.log(comIds)
 
