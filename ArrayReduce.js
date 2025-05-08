@@ -3,15 +3,32 @@
 // Example 1
 const prices = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
-const total = prices.reduce(sum);
+const total = prices.reduce(function(acumulador, valor){
+    acumulador += valor;
+    return acumulador;
+});
 
 console.log(`$${total.toFixed(2)}`)
 
-function sum(accumulator, element) {
-    return accumulator + element; 
-}
-
 // Example 2
+const pessoas = [
+    { nome: 'João', idade: 25 },
+    { nome: 'Maria', idade: 17 },
+    { nome: 'José', idade: 30 },
+    { nome: 'Ana', idade: 22 },
+    { nome: 'Pedro', idade: 18 }
+];
+
+const maisVelha = pessoas.reduce(function(acumulador, valor) {
+    if (acumulador.idade > valor.idade) {
+        return acumulador;
+    }
+    return valor;
+});
+
+console.log(maisVelha.nome + " é a mais velha com " + maisVelha.idade + " anos.");
+
+// Example 3
 
 const grades = [12, 13, 14, 15, 16, 17, 18, 19, 20];
 
@@ -29,7 +46,7 @@ function getMin(accumulator, element) {
     return Math.min(accumulator, element);
 }
 
-// Example 3
+// Example 4
 let numeros = [5, 10, 15, 20, 25];
 
 let total2 = numeros.reduce((acumulador, numero, indice, original) => {
